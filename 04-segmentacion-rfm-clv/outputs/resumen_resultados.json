@@ -1,0 +1,191 @@
+{
+  "clientes": 6500,
+  "pedidos": 10966,
+  "ventas_netas": 1669836300.0,
+  "margen_bruto": 732259170.0,
+  "ticket_promedio": 152274,
+  "pct_compra_unica": 74.0,
+  "top10_pct_ventas": 36.9,
+  "top20_pct_ventas": 52.5,
+  "retencion_m1_prom": 11.1,
+  "recompra_90_dias_pct": 21.5,
+  "segmentos": [
+    {
+      "segmento": "Hibernando",
+      "clientes": 2474,
+      "ventas": 388921300.0,
+      "margen": 170528364.0,
+      "recencia_prom": 358.5,
+      "frecuencia_prom": 1.1,
+      "pct_clientes": 38.1,
+      "pct_ventas": 23.3,
+      "ticket_prom": 145882.0,
+      "accion": "Solo campañas de temporada de bajo costo; excluir de pauta paga",
+      "canal_sugerido": "Email masivo"
+    },
+    {
+      "segmento": "Campeones",
+      "clientes": 306,
+      "ventas": 321645300.0,
+      "margen": 140676119.0,
+      "recencia_prom": 19.5,
+      "frecuencia_prom": 6.4,
+      "pct_clientes": 4.7,
+      "pct_ventas": 19.3,
+      "ticket_prom": 163687.2,
+      "accion": "Programa VIP, acceso anticipado a colecciones, pedir reseñas y referidos",
+      "canal_sugerido": "Email + WhatsApp"
+    },
+    {
+      "segmento": "Leales",
+      "clientes": 245,
+      "ventas": 219481500.0,
+      "margen": 96292891.0,
+      "recencia_prom": 106.9,
+      "frecuencia_prom": 5.6,
+      "pct_clientes": 3.8,
+      "pct_ventas": 13.1,
+      "ticket_prom": 160557.1,
+      "accion": "Venta cruzada (moda → hogar), puntos de fidelidad",
+      "canal_sugerido": "Email"
+    },
+    {
+      "segmento": "Potenciales leales",
+      "clientes": 583,
+      "ventas": 209528600.0,
+      "margen": 92428419.0,
+      "recencia_prom": 47.4,
+      "frecuencia_prom": 2.4,
+      "pct_clientes": 9.0,
+      "pct_ventas": 12.5,
+      "ticket_prom": 152273.7,
+      "accion": "Incentivo para la 3.ª compra, recomendaciones personalizadas",
+      "canal_sugerido": "Email + Meta (audiencia personalizada)"
+    },
+    {
+      "segmento": "A punto de dormir",
+      "clientes": 1122,
+      "ventas": 184537100.0,
+      "margen": 80887746.0,
+      "recencia_prom": 170.5,
+      "frecuencia_prom": 1.1,
+      "pct_clientes": 17.3,
+      "pct_ventas": 11.1,
+      "ticket_prom": 146110.1,
+      "accion": "Contenido de valor y descuento moderado antes de que se pierdan",
+      "canal_sugerido": "Email + Meta"
+    },
+    {
+      "segmento": "Prometedores",
+      "clientes": 877,
+      "ventas": 128213600.0,
+      "margen": 56098814.0,
+      "recencia_prom": 84.7,
+      "frecuencia_prom": 1.0,
+      "pct_clientes": 13.5,
+      "pct_ventas": 7.7,
+      "ticket_prom": 146195.7,
+      "accion": "Recordar novedades de la categoría que compraron",
+      "canal_sugerido": "Email + retargeting"
+    },
+    {
+      "segmento": "Nuevos",
+      "clientes": 668,
+      "ventas": 98108000.0,
+      "margen": 43135241.0,
+      "recencia_prom": 24.4,
+      "frecuencia_prom": 1.0,
+      "pct_clientes": 10.3,
+      "pct_ventas": 5.9,
+      "ticket_prom": 146868.3,
+      "accion": "Secuencia de bienvenida, guía de tallas, cupón para la 2.ª compra en 30 días",
+      "canal_sugerido": "Email automatizado"
+    },
+    {
+      "segmento": "En riesgo",
+      "clientes": 111,
+      "ventas": 58346100.0,
+      "margen": 25392024.0,
+      "recencia_prom": 309.1,
+      "frecuencia_prom": 3.4,
+      "pct_clientes": 1.7,
+      "pct_ventas": 3.5,
+      "ticket_prom": 152738.5,
+      "accion": "Campaña de reactivación \"te extrañamos\" con beneficio fuerte",
+      "canal_sugerido": "Email + Meta"
+    },
+    {
+      "segmento": "Necesitan atención",
+      "clientes": 99,
+      "ventas": 44338100.0,
+      "margen": 19476234.0,
+      "recencia_prom": 169.4,
+      "frecuencia_prom": 3.0,
+      "pct_clientes": 1.5,
+      "pct_ventas": 2.7,
+      "ticket_prom": 149286.5,
+      "accion": "Oferta por tiempo limitado, encuesta de satisfacción",
+      "canal_sugerido": "Email"
+    },
+    {
+      "segmento": "No se pueden perder",
+      "clientes": 15,
+      "ventas": 16716700.0,
+      "margen": 7343318.0,
+      "recencia_prom": 266.3,
+      "frecuencia_prom": 7.0,
+      "pct_clientes": 0.2,
+      "pct_ventas": 1.0,
+      "ticket_prom": 159206.7,
+      "accion": "Contacto 1 a 1, oferta exclusiva de recuperación",
+      "canal_sugerido": "WhatsApp / llamada"
+    }
+  ],
+  "clv": [
+    {
+      "canal": "Orgánico / SEO",
+      "clientes": 233,
+      "pedidos_por_cliente": 2.12,
+      "ventas_12m_por_cliente": 321004.0,
+      "margen_12m_por_cliente": 140319.0,
+      "cac": 12000,
+      "clv_cac": 11.69
+    },
+    {
+      "canal": "Referidos",
+      "clientes": 127,
+      "pedidos_por_cliente": 2.41,
+      "ventas_12m_por_cliente": 375935.0,
+      "margen_12m_por_cliente": 164846.0,
+      "cac": 20000,
+      "clv_cac": 8.24
+    },
+    {
+      "canal": "Google Ads",
+      "clientes": 427,
+      "pedidos_por_cliente": 2.11,
+      "ventas_12m_por_cliente": 325763.0,
+      "margen_12m_por_cliente": 142044.0,
+      "cac": 29440,
+      "clv_cac": 4.82
+    },
+    {
+      "canal": "Meta Ads",
+      "clientes": 456,
+      "pedidos_por_cliente": 1.85,
+      "ventas_12m_por_cliente": 285987.0,
+      "margen_12m_por_cliente": 126083.0,
+      "cac": 35530,
+      "clv_cac": 3.55
+    },
+    {
+      "canal": "TikTok Ads",
+      "clientes": 284,
+      "pedidos_por_cliente": 1.63,
+      "ventas_12m_por_cliente": 245799.0,
+      "margen_12m_por_cliente": 108213.0,
+      "cac": 66609,
+      "clv_cac": 1.62
+    }
+  ]
+}
