@@ -1,0 +1,73 @@
+// =====================================================================
+// Medidas DAX para Power BI  |  Tabla de hechos: campanas (campanas_unificado.csv)
+// Recomendado: crear una tabla Calendario y relacionarla con campanas[fecha]
+// =====================================================================
+
+// ---------- Calendario (Modelado > Nueva tabla) ----------
+Calendario =
+ADDCOLUMNS (
+    CALENDAR ( DATE ( 2026, 1, 1 ), DATE ( 2026, 6, 30 ) ),
+    "Año", YEAR ( [Date] ),
+    "Mes", FORMAT ( [Date], "MMM" ),
+    "MesNum", MONTH ( [Date] ),
+    "DiaSemana", FORMAT ( [Date], "dddd" ),
+    "FinDeSemana", IF ( WEEKDAY ( [Date], 2 ) >= 6, "Sí", "No" )
+)
+
+// ---------- Medidas base ----------
+Inversión = SUM ( campanas[spend] )
+Ingresos = SUM ( campanas[revenue] )
+Impresiones = SUM ( campanas[impressions] )
+Clics = SUM ( campanas[clicks] )
+Conversiones = SUM ( campanas[conversions] )
+
+// ---------- KPIs de eficiencia ----------
+ROAS = DIVIDE ( [Ingresos], [Inversión] )
+CPA = DIVIDE ( [Inversión], [Conversiones] )
+CTR % = DIVIDE ( [Clics], [Impresiones] )
+CPC = DIVIDE ( [Inversión], [Clics] )
+CPM = DIVIDE ( [Inversión], [Impresiones] ) * 1000
+CVR % = DIVIDE ( [Conversiones], [Clics] )
+Ticket Promedio = DIVIDE ( [Ingresos], [Conversiones] )
+
+// ---------- Participación y ranking ----------
+% Participación Inversión =
+DIVIDE ( [Inversión], CALCULATE ( [Inversión], ALL ( campanas[plataforma], campanas[campana] ) ) )
+
+Ranking ROAS Campaña =
+IF (
+    HASONEVALUE ( campanas[campana] ),
+    RANKX ( ALL ( campanas[campana] ), [ROAS], , DESC, DENSE )
+)
+
+// ---------- Inteligencia de tiempo ----------
+Ingresos Mes Anterior =
+CALCULATE ( [Ingresos], DATEADD ( Calendario[Date], -1, MONTH ) )
+
+Var % Ingresos MoM =
+DIVIDE ( [Ingresos] - [Ingresos Mes Anterior], [Ingresos Mes Anterior] )
+
+Ingresos Acumulados (YTD) =
+TOTALYTD ( [Ingresos], Calendario[Date] )
+
+ROAS Móvil 7 días =
+VAR UltimaFecha = MAX ( Calendario[Date] )
+RETURN
+    CALCULATE (
+        [ROAS],
+        DATESINPERIOD ( Calendario[Date], UltimaFecha, -7, DAY )
+    )
+
+// ---------- Semáforo para formato condicional ----------
+Estado ROAS =
+SWITCH (
+    TRUE (),
+    [ROAS] >= 4, "🟢 Escalar",
+    [ROAS] >= 2, "🟡 Optimizar",
+    [ROAS] >= 1, "🟠 Revisar",
+    "🔴 Pausar o cambiar objetivo"
+)
+
+// ---------- Meta y cumplimiento (meta de ROAS = 3,5) ----------
+Meta ROAS = 3.5
+Cumplimiento Meta ROAS % = DIVIDE ( [ROAS], [Meta ROAS] )
