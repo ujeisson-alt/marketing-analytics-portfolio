@@ -1,0 +1,238 @@
+{
+  "inversion_total": 899143052.0,
+  "ingresos_total": 3561113502.0,
+  "roas_total": 3.96,
+  "conversiones_total": 24901,
+  "cpa_total": 36109,
+  "plataformas": [
+    {
+      "plataforma": "Google Ads",
+      "inversion": 365993693.0,
+      "ingresos": 1871634662.0,
+      "roas": 5.11,
+      "cpa": 29440.0,
+      "ctr_pct": 3.5,
+      "cpc": 575.0,
+      "cpm": 20096.0,
+      "cvr_pct": 1.95,
+      "participacion_inversion_pct": 40.7
+    },
+    {
+      "plataforma": "Meta Ads",
+      "inversion": 339982244.0,
+      "ingresos": 1331523916.0,
+      "roas": 3.92,
+      "cpa": 35530.0,
+      "ctr_pct": 1.47,
+      "cpc": 689.0,
+      "cpm": 10146.0,
+      "cvr_pct": 1.94,
+      "participacion_inversion_pct": 37.8
+    },
+    {
+      "plataforma": "TikTok Ads",
+      "inversion": 193167115.0,
+      "ingresos": 357954924.0,
+      "roas": 1.85,
+      "cpa": 66609.0,
+      "ctr_pct": 1.01,
+      "cpc": 564.0,
+      "cpm": 5708.0,
+      "cvr_pct": 0.85,
+      "participacion_inversion_pct": 21.5
+    }
+  ],
+  "campanas": [
+    {
+      "plataforma": "Google Ads",
+      "campana": "GA_Search_Marca",
+      "objetivo": "Conversiones",
+      "inversion": 66681469.0,
+      "ingresos": 607713269.0,
+      "conversiones": 3684,
+      "roas": 9.11,
+      "cpa": 18100.0,
+      "ctr_pct": 9.01,
+      "cvr_pct": 1.53,
+      "ranking_roas": 1
+    },
+    {
+      "plataforma": "Meta Ads",
+      "campana": "META_Retargeting_Carrito",
+      "objetivo": "Ventas",
+      "inversion": 53963156.0,
+      "ingresos": 415962142.0,
+      "conversiones": 2875,
+      "roas": 7.71,
+      "cpa": 18770.0,
+      "ctr_pct": 2.2,
+      "cvr_pct": 3.87,
+      "ranking_roas": 2
+    },
+    {
+      "plataforma": "Google Ads",
+      "campana": "GA_PMax_Catalogo",
+      "objetivo": "Ventas",
+      "inversion": 145998714.0,
+      "ingresos": 705453904.0,
+      "conversiones": 5030,
+      "roas": 4.83,
+      "cpa": 29026.0,
+      "ctr_pct": 1.61,
+      "cvr_pct": 2.99,
+      "ranking_roas": 3
+    },
+    {
+      "plataforma": "Meta Ads",
+      "campana": "META_AdvantagePlus_Shopping",
+      "objetivo": "Ventas",
+      "inversion": 123073150.0,
+      "ingresos": 509070210.0,
+      "conversiones": 3686,
+      "roas": 4.14,
+      "cpa": 33389.0,
+      "ctr_pct": 1.52,
+      "cvr_pct": 1.99,
+      "ranking_roas": 4
+    },
+    {
+      "plataforma": "Google Ads",
+      "campana": "GA_Search_Genericas",
+      "objetivo": "Conversiones",
+      "inversion": 153313510.0,
+      "ingresos": 558467489.0,
+      "conversiones": 3718,
+      "roas": 3.64,
+      "cpa": 41235.0,
+      "ctr_pct": 4.49,
+      "cvr_pct": 1.64,
+      "ranking_roas": 5
+    },
+    {
+      "plataforma": "TikTok Ads",
+      "campana": "TT_Conversiones_Spark",
+      "objetivo": "Conversiones",
+      "inversion": 82040237.0,
+      "ingresos": 255956145.0,
+      "conversiones": 2049,
+      "roas": 3.12,
+      "cpa": 40039.0,
+      "ctr_pct": 1.21,
+      "cvr_pct": 1.45,
+      "ranking_roas": 6
+    },
+    {
+      "plataforma": "Meta Ads",
+      "campana": "META_Prospecting_Lookalike",
+      "objetivo": "Ventas",
+      "inversion": 162945938.0,
+      "ingresos": 406491564.0,
+      "conversiones": 3008,
+      "roas": 2.49,
+      "cpa": 54171.0,
+      "ctr_pct": 1.3,
+      "cvr_pct": 1.28,
+      "ranking_roas": 7
+    },
+    {
+      "plataforma": "TikTok Ads",
+      "campana": "TT_Awareness_UGC",
+      "objetivo": "Alcance",
+      "inversion": 111126878.0,
+      "ingresos": 101998779.0,
+      "conversiones": 851,
+      "roas": 0.92,
+      "cpa": 130584.0,
+      "ctr_pct": 0.91,
+      "cvr_pct": 0.42,
+      "ranking_roas": 8
+    }
+  ],
+  "curvas": [
+    {
+      "campana": "GA_PMax_Catalogo",
+      "b": 0.868,
+      "r2": 0.737,
+      "roas_promedio": 4.66,
+      "roas_marginal": 4.043,
+      "inversion_diaria": 806622.729,
+      "inversion_recomendada": 1613245.459,
+      "cambio_pct": 100.0
+    },
+    {
+      "campana": "GA_Search_Genericas",
+      "b": 0.93,
+      "r2": 0.722,
+      "roas_promedio": 3.472,
+      "roas_marginal": 3.229,
+      "inversion_diaria": 847035.967,
+      "inversion_recomendada": 430106.422,
+      "cambio_pct": -49.222
+    },
+    {
+      "campana": "GA_Search_Marca",
+      "b": 0.548,
+      "r2": 0.483,
+      "roas_promedio": 8.821,
+      "roas_marginal": 4.831,
+      "inversion_diaria": 368405.906,
+      "inversion_recomendada": 730125.924,
+      "cambio_pct": 98.185
+    },
+    {
+      "campana": "META_AdvantagePlus_Shopping",
+      "b": 0.848,
+      "r2": 0.551,
+      "roas_promedio": 4.018,
+      "roas_marginal": 3.408,
+      "inversion_diaria": 679962.155,
+      "inversion_recomendada": 899067.438,
+      "cambio_pct": 32.223
+    },
+    {
+      "campana": "META_Prospecting_Lookalike",
+      "b": 0.858,
+      "r2": 0.566,
+      "roas_promedio": 2.382,
+      "roas_marginal": 2.044,
+      "inversion_diaria": 900253.801,
+      "inversion_recomendada": 450126.901,
+      "cambio_pct": -50.0
+    },
+    {
+      "campana": "META_Retargeting_Carrito",
+      "b": 0.468,
+      "r2": 0.451,
+      "roas_promedio": 7.48,
+      "roas_marginal": 3.497,
+      "inversion_diaria": 298138.983,
+      "inversion_recomendada": 311257.04,
+      "cambio_pct": 4.4
+    },
+    {
+      "campana": "TT_Awareness_UGC",
+      "b": 0.73,
+      "r2": 0.304,
+      "roas_promedio": 0.803,
+      "roas_marginal": 0.586,
+      "inversion_diaria": 615903.534,
+      "inversion_recomendada": 309024.382,
+      "cambio_pct": -49.826
+    },
+    {
+      "campana": "TT_Conversiones_Spark",
+      "b": 1.015,
+      "r2": 0.54,
+      "roas_promedio": 2.907,
+      "roas_marginal": 2.951,
+      "inversion_diaria": 453260.978,
+      "inversion_recomendada": 226630.489,
+      "cambio_pct": -50.0
+    }
+  ],
+  "mejora_pct": 11.4,
+  "ingreso_diario_actual": 18868589,
+  "ingreso_diario_optimo": 21022891,
+  "dia_madre_ingreso_diario": 32370761.0,
+  "resto_ingreso_diario": 18443523.0
+}
