@@ -1,0 +1,74 @@
+// =====================================================================
+// RFM en Power BI  |  Tablas: pedidos (pedidos.csv), clientes (clientes.csv)
+// Relación: clientes[customer_id] 1 ── * pedidos[customer_id]
+// =====================================================================
+
+// ---------- Columnas calculadas en la tabla clientes ----------
+Fecha Corte = DATE ( 2026, 6, 30 )
+
+Recencia Días =
+DATEDIFF ( CALCULATE ( MAX ( pedidos[order_date] ) ), clientes[Fecha Corte], DAY )
+
+Frecuencia = CALCULATE ( DISTINCTCOUNT ( pedidos[order_id] ) )
+
+Monto = CALCULATE ( SUM ( pedidos[net_sales] ) )
+
+// R: quintiles de recencia (5 = compró hace poco)
+R Score =
+VAR Pos = RANKX ( clientes, clientes[Recencia Días], , ASC, SKIP )
+VAR Total = COUNTROWS ( clientes )
+RETURN 5 - INT ( DIVIDE ( Pos - 1, Total ) * 5 )
+
+// F: regla de negocio (la mayoría compra una sola vez)
+F Score =
+SWITCH ( TRUE (),
+    clientes[Frecuencia] >= 6, 5,
+    clientes[Frecuencia] >= 4, 4,
+    clientes[Frecuencia] = 3, 3,
+    clientes[Frecuencia] = 2, 2,
+    1
+)
+
+// M: quintiles de monto (5 = gasta más)
+M Score =
+VAR Pos = RANKX ( clientes, clientes[Monto], , ASC, SKIP )
+VAR Total = COUNTROWS ( clientes )
+RETURN 1 + INT ( DIVIDE ( Pos - 1, Total ) * 5 )
+
+Segmento RFM =
+VAR R = clientes[R Score]
+VAR F = clientes[F Score]
+RETURN
+    SWITCH ( TRUE (),
+        R = 5 && F >= 4,               "Campeones",
+        R >= 3 && R <= 4 && F >= 4,    "Leales",
+        R >= 4 && F >= 2 && F <= 3,    "Potenciales leales",
+        R = 5 && F = 1,                "Nuevos",
+        R = 4 && F = 1,                "Prometedores",
+        R = 3 && F = 3,                "Necesitan atención",
+        R = 3 && F <= 2,               "A punto de dormir",
+        R <= 2 && F = 5,               "No se pueden perder",
+        R <= 2 && F >= 3,              "En riesgo",
+        "Hibernando"
+    )
+
+// ---------- Medidas ----------
+Clientes = DISTINCTCOUNT ( clientes[customer_id] )
+Ventas Netas = SUM ( pedidos[net_sales] )
+Margen Bruto = SUM ( pedidos[gross_margin] )
+% Margen = DIVIDE ( [Margen Bruto], [Ventas Netas] )
+Pedidos = DISTINCTCOUNT ( pedidos[order_id] )
+Ticket Promedio = DIVIDE ( [Ventas Netas], [Pedidos] )
+Pedidos por Cliente = DIVIDE ( [Pedidos], [Clientes] )
+
+% Clientes del Total =
+DIVIDE ( [Clientes], CALCULATE ( [Clientes], ALL ( clientes[Segmento RFM] ) ) )
+
+% Ventas del Total =
+DIVIDE ( [Ventas Netas], CALCULATE ( [Ventas Netas], ALL ( clientes[Segmento RFM] ) ) )
+
+% Compra Única =
+DIVIDE ( COUNTROWS ( FILTER ( clientes, clientes[Frecuencia] = 1 ) ), [Clientes] )
+
+Clientes en Riesgo =
+CALCULATE ( [Clientes], clientes[Segmento RFM] IN { "En riesgo", "No se pueden perder" } )
