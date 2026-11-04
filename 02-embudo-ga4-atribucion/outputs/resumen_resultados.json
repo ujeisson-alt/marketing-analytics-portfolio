@@ -1,0 +1,276 @@
+{
+  "eventos": 59994,
+  "usuarios": 18000,
+  "sesiones": 31384,
+  "compras": 1304,
+  "ingresos": 253100600.0,
+  "tasa_conversion_sesion_pct": 4.15,
+  "tasa_conversion_usuario_pct": 7.24,
+  "embudo": [
+    {
+      "orden": 1,
+      "paso": "session_start",
+      "sesiones": 31384,
+      "pct_del_total": 100.0,
+      "pct_paso_anterior": NaN,
+      "abandono_pct": NaN
+    },
+    {
+      "orden": 2,
+      "paso": "view_item",
+      "sesiones": 20668,
+      "pct_del_total": 65.86,
+      "pct_paso_anterior": 65.9,
+      "abandono_pct": 34.1
+    },
+    {
+      "orden": 3,
+      "paso": "add_to_cart",
+      "sesiones": 3873,
+      "pct_del_total": 12.34,
+      "pct_paso_anterior": 18.7,
+      "abandono_pct": 81.3
+    },
+    {
+      "orden": 4,
+      "paso": "begin_checkout",
+      "sesiones": 2765,
+      "pct_del_total": 8.81,
+      "pct_paso_anterior": 71.4,
+      "abandono_pct": 28.6
+    },
+    {
+      "orden": 5,
+      "paso": "purchase",
+      "sesiones": 1304,
+      "pct_del_total": 4.15,
+      "pct_paso_anterior": 47.2,
+      "abandono_pct": 52.8
+    }
+  ],
+  "dispositivo": [
+    {
+      "dispositivo": "mobile",
+      "sesiones": 21223,
+      "add_to_cart": 2611,
+      "begin_checkout": 1870,
+      "compras": 745,
+      "checkout_a_compra_pct": 39.8,
+      "tasa_conversion_pct": 3.51
+    },
+    {
+      "dispositivo": "desktop",
+      "sesiones": 8999,
+      "add_to_cart": 1121,
+      "begin_checkout": 784,
+      "compras": 491,
+      "checkout_a_compra_pct": 62.6,
+      "tasa_conversion_pct": 5.46
+    },
+    {
+      "dispositivo": "tablet",
+      "sesiones": 1162,
+      "add_to_cart": 141,
+      "begin_checkout": 111,
+      "compras": 68,
+      "checkout_a_compra_pct": 61.3,
+      "tasa_conversion_pct": 5.85
+    }
+  ],
+  "pct_compras_multitoque": 72.4,
+  "toques_promedio": 2.48,
+  "dias_promedio_a_compra": 5.5,
+  "dias_mediana_a_compra": 3.0,
+  "atribucion": [
+    {
+      "canal": "Paid Search",
+      "First click": 58275300.0,
+      "Linear": 68389950.6,
+      "Position-based": 68870009.3,
+      "Time decay": 70797658.7,
+      "Last click": 80107900.0,
+      "cambio_vs_last_click_pct": -14.0
+    },
+    {
+      "canal": "Direct",
+      "First click": 31956600.0,
+      "Linear": 43176740.0,
+      "Position-based": 43113231.3,
+      "Time decay": 45587141.6,
+      "Last click": 54100700.0,
+      "cambio_vs_last_click_pct": -20.3
+    },
+    {
+      "canal": "Paid Social - Meta",
+      "First click": 45046200.0,
+      "Linear": 42772720.1,
+      "Position-based": 42711796.3,
+      "Time decay": 42762940.4,
+      "Last click": 40343200.0,
+      "cambio_vs_last_click_pct": 5.9
+    },
+    {
+      "canal": "Organic Search",
+      "First click": 55420700.0,
+      "Linear": 43811920.2,
+      "Position-based": 44270212.3,
+      "Time decay": 41069424.9,
+      "Last click": 33888400.0,
+      "cambio_vs_last_click_pct": 30.6
+    },
+    {
+      "canal": "Email",
+      "First click": 0.0,
+      "Linear": 17698367.9,
+      "Position-based": 15686605.0,
+      "Time decay": 20410819.4,
+      "Last click": 28482800.0,
+      "cambio_vs_last_click_pct": -44.9
+    },
+    {
+      "canal": "Paid Social - TikTok",
+      "First click": 34990000.0,
+      "Linear": 18365280.7,
+      "Position-based": 19412419.3,
+      "Time decay": 15271929.9,
+      "Last click": 5611000.0,
+      "cambio_vs_last_click_pct": 246.0
+    },
+    {
+      "canal": "Organic Social",
+      "First click": 14364200.0,
+      "Linear": 10329156.0,
+      "Position-based": 10234917.7,
+      "Time decay": 9366794.4,
+      "Last click": 5536600.0,
+      "cambio_vs_last_click_pct": 84.9
+    },
+    {
+      "canal": "Referral",
+      "First click": 13047600.0,
+      "Linear": 8556464.5,
+      "Position-based": 8801408.7,
+      "Time decay": 7833890.7,
+      "Last click": 5030000.0,
+      "cambio_vs_last_click_pct": 75.0
+    }
+  ],
+  "top_rutas": [
+    {
+      "ruta": "Paid Search",
+      "compras": 102,
+      "ingresos": 19963100.0
+    },
+    {
+      "ruta": "Organic Search",
+      "compras": 100,
+      "ingresos": 19187500.0
+    },
+    {
+      "ruta": "Direct",
+      "compras": 57,
+      "ingresos": 10936600.0
+    },
+    {
+      "ruta": "Paid Social - Meta",
+      "compras": 50,
+      "ingresos": 8380200.0
+    },
+    {
+      "ruta": "Paid Social - Meta → Paid Search",
+      "compras": 34,
+      "ingresos": 7371200.0
+    },
+    {
+      "ruta": "Organic Search → Paid Search",
+      "compras": 28,
+      "ingresos": 5051200.0
+    },
+    {
+      "ruta": "Paid Search → Paid Search",
+      "compras": 27,
+      "ingresos": 5653300.0
+    },
+    {
+      "ruta": "Organic Search → Direct",
+      "compras": 25,
+      "ingresos": 4573500.0
+    },
+    {
+      "ruta": "Paid Social - Meta → Paid Social - Meta",
+      "compras": 21,
+      "ingresos": 3954400.0
+    },
+    {
+      "ruta": "Paid Social - TikTok → Paid Search",
+      "compras": 21,
+      "ingresos": 5141500.0
+    }
+  ],
+  "canal": [
+    {
+      "canal": "Paid Search",
+      "sesiones": 6762,
+      "sesiones_nuevas": 3422,
+      "compras": 400,
+      "tasa_conversion_pct": 5.92,
+      "ingresos_last_click": 80107900.0
+    },
+    {
+      "canal": "Direct",
+      "sesiones": 5024,
+      "sesiones_nuevas": 2172,
+      "compras": 285,
+      "tasa_conversion_pct": 5.67,
+      "ingresos_last_click": 54100700.0
+    },
+    {
+      "canal": "Paid Social - Meta",
+      "sesiones": 5966,
+      "sesiones_nuevas": 3545,
+      "compras": 215,
+      "tasa_conversion_pct": 3.6,
+      "ingresos_last_click": 40343200.0
+    },
+    {
+      "canal": "Organic Search",
+      "sesiones": 5310,
+      "sesiones_nuevas": 3746,
+      "compras": 181,
+      "tasa_conversion_pct": 3.41,
+      "ingresos_last_click": 33888400.0
+    },
+    {
+      "canal": "Email",
+      "sesiones": 1888,
+      "sesiones_nuevas": 0,
+      "compras": 143,
+      "tasa_conversion_pct": 7.57,
+      "ingresos_last_click": 28482800.0
+    },
+    {
+      "canal": "Paid Social - TikTok",
+      "sesiones": 3504,
+      "sesiones_nuevas": 2975,
+      "compras": 26,
+      "tasa_conversion_pct": 0.74,
+      "ingresos_last_click": 5611000.0
+    },
+    {
+      "canal": "Organic Social",
+      "sesiones": 1651,
+      "sesiones_nuevas": 1095,
+      "compras": 31,
+      "tasa_conversion_pct": 1.88,
+      "ingresos_last_click": 5536600.0
+    },
+    {
+      "canal": "Referral",
+      "sesiones": 1279,
+      "sesiones_nuevas": 1045,
+      "compras": 23,
+      "tasa_conversion_pct": 1.8,
+      "ingresos_last_click": 5030000.0
+    }
+  ]
+}

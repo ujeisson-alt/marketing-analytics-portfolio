@@ -1,0 +1,11 @@
+ruta,compras,ingresos
+Paid Search,102,19963100.0
+Organic Search,100,19187500.0
+Direct,57,10936600.0
+Paid Social - Meta,50,8380200.0
+Paid Social - Meta → Paid Search,34,7371200.0
+Organic Search → Paid Search,28,5051200.0
+Paid Search → Paid Search,27,5653300.0
+Organic Search → Direct,25,4573500.0
+Paid Social - Meta → Paid Social - Meta,21,3954400.0
+Paid Social - TikTok → Paid Search,21,5141500.0
